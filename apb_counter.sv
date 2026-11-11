@@ -113,7 +113,7 @@ always @(posedge pclk)
         counter <= 32'h0;                 // сброс по команде
     else if (run)
     begin
-        repeat(5) @(posedge pclk);
+        repeat(4) @(posedge pclk);
         if (counter >= max_value)
             counter <= 32'h0;             // дошли до максимума - начинаем заново
         else
